@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.birthday-buddy-section {
+  background-color: #fae8fe;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+.birthday-buddy-container {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.person-img {
+  width: 100px;
+}
+.birthday-buddy-container .title {
+  margin: 0 0 30px 0;
+  font-size: 32px;
+}
+.person-info h4,
+.birthday-buddy-container .title {
+  font-weight: 400;
+}
+.birthday-buddy-container .person-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.person-info h4 {
+  font-size: 24px;
+  margin: 0;
+}
+.person-info p {
+  color: #64748b;
+  margin: 5px 0;
+}
+.person-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.person-container:last-child {
+  margin-bottom: 0;
+}
+.clear-all-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  background-color: #d946ee;
+  cursor: pointer;
+}
+.remove-btn {
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  background-color: #d946ee;
+  cursor: pointer;
+}
