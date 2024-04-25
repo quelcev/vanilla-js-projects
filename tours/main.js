@@ -42,7 +42,7 @@ function displayTours() {
               src="${image}"
               alt="${name}"
             />
-            <span>${price}</span>
+            <span>${formatter.format(price.replace(",", ""))}</span>
           </div>
           <div class="info">
             <h5>${name}</h5>
@@ -153,3 +153,9 @@ function toggleTitle() {
     noToursEl.className = "no-tours show";
   }
 }
+
+const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0,
+});
