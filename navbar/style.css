@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+button i {
+  pointer-events: none;
+}
+.nav {
+  background-color: #fff;
+  height: 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.nav-center {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.logo {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+.nav-toggle {
+  display: none;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+.links a {
+  text-decoration: none;
+  color: #334155;
+}
+.links-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+.links-icon a {
+  color: #007bff;
+  font-size: 20px;
+}
+@media only screen and (max-width: 639px) {
+  .links-icon {
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 0;
+    visibility: hidden;
+  }
+  .nav-center.show-links .links-icon {
+    visibility: visible;
+    padding-bottom: 15px;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 24px;
+    color: #007bff;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .logo__nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  .nav-center {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .links {
+    flex-direction: column;
+    transition: all 0.3s;
+    height: 0;
+    visibility: hidden;
+  }
+  .nav-center.show-links .links {
+    visibility: visible;
+    padding-bottom: 15px;
+  }
+  .nav {
+    height: auto;
+    overflow: hidden;
+  }
+}
