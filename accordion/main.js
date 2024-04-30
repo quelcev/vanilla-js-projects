@@ -8,6 +8,7 @@ accordionBtnEls.forEach((btn) => {
     const accordionItemEl = e.currentTarget.closest(".accordion-item");
     const accordionContentEl =
       accordionItemEl.querySelector(".accordion-content");
+
     if (accordionItemEl.classList.contains("active")) {
       accordionContentEl.style.height = 0;
       accordionItemEl.classList.remove("active");
@@ -20,8 +21,25 @@ accordionBtnEls.forEach((btn) => {
       }px`;
       accordionItemEl.classList.add("active");
     }
+
+    setTimeout(() => {
+      scrollToElement(accordionItemEl);
+    }, 400);
   });
 });
+
+function scrollToElement(element) {
+  const offset = 15;
+  const bodyRect = document.body.getBoundingClientRect().top;
+  const elementRect = element.getBoundingClientRect().top;
+  const elementPosition = elementRect - bodyRect;
+  const offsetPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+}
 
 function resetAccordion() {
   accordionItemEls.forEach((item) => {

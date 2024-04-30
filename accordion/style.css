@@ -28,6 +28,10 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: var(--section-color);
@@ -88,12 +92,12 @@ Project CSS
 */
 #accordion {
   background-color: var(--background-color);
-  min-height: 100vh;
+  min-height: 200vh;
   padding: 0 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  padding-top: 120px;
 }
 #accordion > h2 {
   margin-bottom: 30px;
