@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-color: #ffbc0e;
+  --text-color: #252525;
+  --text-color-gray: #64748b;
+  --background-color: #eee;
+  --red-color: #dc3444;
+  --green-color: #198753;
+  --transition: all 300ms linear;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--section-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 16px;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 15px;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+p {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 639px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+}
+/*
+=============== 
+Project CSS
+===============
+*/
+section.menu {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+.menu-center {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 15px;
+}
+.menu-center > .title {
+  text-align: center;
+  position: relative;
+}
+.menu-center > .title::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 80px;
+  background-color: var(--primary-color);
+}
+.category-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 55px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.category-btn {
+  border: 1px solid var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: #fff;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+}
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.menu-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+.menu-container .menu-item {
+  flex-basis: calc(50% - 15px);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+.menu-item .img-container {
+  flex-basis: 40%;
+}
+.menu-item .info {
+  flex-basis: 60%;
+}
+.menu-item .img-container img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  height: 100%;
+}
+.menu-item .info {
+  padding: 20px 20px 20px 0;
+}
+.menu-item .info p {
+  margin-bottom: 5px;
+}
+.info .name__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted #617d98;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+.info .name__price .price {
+  color: var(--primary-color);
+}
+.info .desc {
+  color: #617d98;
+}
+.name__price .name {
+  letter-spacing: 4px;
+}
+@media only screen and (max-width: 1010px) {
+  .category-btn-container {
+    justify-content: flex-start;
+  }
+  .menu-container {
+    gap: 15px;
+  }
+  .menu-container .menu-item {
+    flex-direction: column;
+    gap: 0;
+    flex-basis: calc(50% - 7.5px);
+  }
+  .menu-item .img-container img {
+    height: 180px;
+  }
+  .menu-item .info {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .menu-container .menu-item {
+    flex-basis: 100%;
+  }
+  .menu-container {
+    gap: 30px;
+  }
+}
