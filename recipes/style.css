@@ -147,6 +147,13 @@ section.menu {
   overflow: hidden;
   display: flex;
   gap: 20px;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(-100%) scale(0);
+}
+.menu-container .menu-item.transition {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 .menu-item .img-container {
   flex-basis: 50%;

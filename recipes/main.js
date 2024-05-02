@@ -77,6 +77,21 @@ function displayRecipes(recipes) {
     })
     .join("");
 
+  const menuItemEls = document.querySelectorAll(".menu-item");
+  toggleTransitionClass();
+  window.addEventListener("scroll", throttle(toggleTransitionClass, 300));
+
+  function toggleTransitionClass() {
+    console.log(111);
+    menuItemEls.forEach((el) => {
+      if (window.scrollY > el.offsetTop - 600) {
+        el.classList.add("transition");
+      } else {
+        el.classList.remove("transition");
+      }
+    });
+  }
+
   const readMoreEls = document.querySelectorAll(".read-more");
   readMoreEls.forEach((el) => {
     el.addEventListener("click", (e) => {
@@ -128,3 +143,14 @@ categoryBtnContainerEl.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 1; // Adjust scroll speed
   categoryBtnContainerEl.scrollLeft = scrollLeft - walk;
 });
+
+function throttle(goal_func, wait_ms) {
+  // fires goal_func but only if wait_ms has elapsed, otherwise does nothing.
+  var time = Date.now();
+  return function () {
+    if (time + wait_ms - Date.now() < 0) {
+      goal_func();
+      time = Date.now();
+    }
+  };
+}
