@@ -79,7 +79,7 @@ function displayRecipes(recipes) {
 
   const menuItemEls = document.querySelectorAll(".menu-item");
   toggleTransitionClass();
-  window.addEventListener("scroll", throttle(toggleTransitionClass, 300));
+  window.addEventListener("scroll", throttle(toggleTransitionClass, 100));
 
   function toggleTransitionClass() {
     console.log(111);
