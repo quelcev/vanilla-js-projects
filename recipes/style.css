@@ -149,11 +149,11 @@ section.menu {
   gap: 20px;
   transition: var(--transition);
   opacity: 0;
-  transform: translateY(-100%) scale(0);
+  visibility: hidden;
 }
 .menu-container .menu-item.transition {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  visibility: visible;
 }
 .menu-item .img-container {
   flex-basis: 50%;

@@ -82,7 +82,6 @@ function displayRecipes(recipes) {
   window.addEventListener("scroll", throttle(toggleTransitionClass, 100));
 
   function toggleTransitionClass() {
-    console.log(111);
     menuItemEls.forEach((el) => {
       if (window.scrollY > el.offsetTop - 600) {
         el.classList.add("transition");
