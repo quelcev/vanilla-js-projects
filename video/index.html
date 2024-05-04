@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="video-container-overlay">
+      <div class="title">
+        <h1>Title</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit earum,
+          consequuntur odio hic itaque modi eveniet. Quisquam natus perferendis,
+          omnis doloribus sed exercitationem alias nihil unde! Pariatur illum
+          eveniet quaerat.
+        </p>
+      </div>
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="switch-btn-container">
+        <div class="switch-btn-inner">
+          <button class="switch-btn">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-pause"></i>
+            <span class="switch"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

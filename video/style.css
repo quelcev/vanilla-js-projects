@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-color: #0765ff;
+  --text-color-black: #252525;
+  --text-color-gray: #64748b;
+  --red-color: #dc3444;
+  --green-color: #198753;
+  --transition: all 300ms linear;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: var(--text-color-black);
+  line-height: 1.5;
+  font-size: 16px;
+}
+button {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+@media screen and (max-width: 639px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+}
+/*
+=============== 
+Project CSS
+===============
+*/
+.video-container-overlay {
+  min-height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.video-container-overlay .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.video-container video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.switch-btn-container {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  width: 100px;
+  height: 35px;
+}
+.switch-btn-inner {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.switch-btn {
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.switch-btn .switch {
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--primary-color);
+  left: 0;
+  transition: var(--transition);
+}
+.switch-btn .switch.paused {
+  left: 50%;
+}
+.switch-btn i {
+  flex-basis: 50%;
+  color: var(--primary-color);
+  font-size: 16px;
+}
