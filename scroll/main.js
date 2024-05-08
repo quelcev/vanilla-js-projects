@@ -35,7 +35,7 @@ scrollLinkEls.forEach((link) => {
       offset = navEl.offsetHeight - linksEl.offsetHeight;
     }
     if (!isSticky && isShowLinks) {
-      offset = navEl.offsetHeight - 15;
+      offset = navEl.offsetHeight - 10;
     }
     const bodyRect = document.body.getBoundingClientRect().top;
     const elementRect = target.getBoundingClientRect().top;
