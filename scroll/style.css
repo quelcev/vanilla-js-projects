@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --primary-color: #65a2c1;
+  --text-color: #252525;
+  --red-color: #dc3444;
+  --green-color: #198753;
+  --transition: all 300ms;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1;
+}
+button {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/*
+=============== 
+Scroll CSS
+===============
+*/
+.hero-container {
+  min-height: 100vh;
+  background-image: url("./hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-center {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: inherit;
+  color: #fff;
+  padding: 0 15px;
+  position: relative;
+}
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.nav.sticky .nav-center {
+  padding: 10px 15px;
+}
+.nav.sticky {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+}
+.nav.sticky a {
+  color: var(--primary-color);
+}
+.nav a {
+  color: #fff;
+}
+.nav .logo {
+  width: 80px;
+  border-radius: 50%;
+}
+.nav .links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.hero-cta-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 106.5px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 106.5px;
+}
+.hero-cta-container h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+}
+.hero-cta-container p {
+  margin: 15px 0;
+}
+.hero-cta-container a {
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: var(--transition);
+  color: #fff;
+}
+.hero-cta-container a:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.nav-btn {
+  display: none;
+}
+.section {
+  min-height: 100vh;
+}
+.section:nth-child(odd) {
+  background-color: #f1f5f8;
+}
+.section .section-inner {
+  padding: 60px 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section .section-inner h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 640px) {
+  .nav .links {
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .nav-btn {
+    display: block;
+    font-size: 25px;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .nav {
+    background-color: #fff;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+  .nav.sticky {
+    width: 100%;
+    margin-left: 0;
+  }
+  .nav-center {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+  }
+  .logo__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav .links {
+    overflow: hidden;
+    align-items: stretch;
+    gap: 0;
+    transition: var(--transition);
+    height: 0;
+  }
+  .nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+    color: var(--primary-color);
+    padding: 10px 0;
+  }
+  .nav a:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  .nav li:first-child {
+    margin-top: 15px;
+  }
+  .nav .links {
+    flex-direction: column;
+  }
+  .hero-cta-container {
+    min-height: calc(100vh - 110px);
+    padding-bottom: 110px;
+  }
+}
