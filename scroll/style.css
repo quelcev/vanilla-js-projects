@@ -168,6 +168,33 @@ Scroll CSS
   align-items: center;
   justify-content: center;
 }
+.back-to-top-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  background-color: #fff;
+  color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top-btn i {
+  transition: var(--transition);
+}
+.back-to-top-btn:hover i {
+  transform: translateY(-2px);
+}
 @media only screen and (min-width: 640px) {
   .nav .links {
     height: auto !important;

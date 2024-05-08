@@ -4,6 +4,8 @@ const navEl = document.querySelector(".nav");
 const heroCtaEl = document.querySelector(".hero-cta-container");
 const scrollLinkEls = document.querySelectorAll(".scroll-link");
 const dateEl = document.querySelector(".date");
+const backToTopBtnEl = document.querySelector(".back-to-top-btn");
+const homeEl = document.getElementById("home");
 
 dateEl.textContent = new Date().getFullYear();
 if (location.hash.length > 0) {
@@ -60,10 +62,18 @@ window.addEventListener(
   "scroll",
   throttle(() => {
     const top = window.pageYOffset || document.documentElement.scrollTop;
+    const homeBtmPos = homeEl.offsetTop + homeEl.offsetHeight;
+
     if (top >= navEl.offsetHeight) {
       navEl.classList.add("sticky");
     } else {
       navEl.classList.remove("sticky");
+    }
+
+    if (top + navEl.offsetHeight >= homeBtmPos) {
+      backToTopBtnEl.classList.add("show");
+    } else {
+      backToTopBtnEl.classList.remove("show");
     }
   }, 10)
 );
