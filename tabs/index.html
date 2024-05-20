@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="about-section">
+      <div class="title">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+          officia.
+        </p>
+      </div>
+      <div class="img__tabs-container">
+        <img
+          class="about-img"
+          src="https://vannilla-js-basic-project-11-tabs.netlify.app/hero-bcg.jpeg"
+          alt=""
+        />
+        <div class="tabs-container">
+          <div class="tab-btns-container">
+            <button data-id="history" class="tab-btn active">History</button>
+            <button data-id="vision" class="tab-btn">Vision</button>
+            <button data-id="goals" class="tab-btn">Goals</button>
+          </div>
+          <div class="tab-content-container">
+            <div data-target-id="history-content" class="tab-content active">
+              <h4>History</h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                aut suscipit nam numquam! Illum unde ducimus reiciendis sequi
+                saepe similique, consectetur officiis porro debitis quidem,
+                numquam impedit, enim culpa dolorem.
+              </p>
+            </div>
+            <div data-target-id="vision-content" class="tab-content">
+              <h4>Vision</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda veritatis numquam fuga ipsam vero non repellendus
+                libero provident, facilis deserunt eum vel modi sapiente in
+                perspiciatis. Optio repellat neque totam.
+              </p>
+            </div>
+            <div data-target-id="goals-content" class="tab-content">
+              <h4>Goals</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                blanditiis eaque atque repellendus maxime consequatur esse,
+                obcaecati fuga iste porro sed officia placeat corrupti nostrum
+                asperiores laudantium maiores expedita neque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
