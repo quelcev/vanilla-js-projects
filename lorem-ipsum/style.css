@@ -75,6 +75,8 @@ h6 {
 }
 .form {
   font-size: 20px;
+  display: flex;
+  gap: 10px;
 }
 .form input {
   border-radius: 4px;
@@ -92,8 +94,14 @@ h6 {
   color: #fff;
   border: 1px solid transparent;
 }
-.form button:hover {
+.form button:not([disabled]):hover {
   background-color: #fff;
   color: #0765ff;
   border: 1px solid #0765ff;
+}
+button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: auto;
 }

@@ -3,10 +3,18 @@ import text from "./data.js";
 const paragraphsInputEl = document.getElementById("paragraphs");
 const formEl = document.querySelector(".form");
 const textContainerEl = document.querySelector(".text-container");
+const submitBtnEl = document.querySelector(".form button");
 
 window.addEventListener("DOMContentLoaded", () => {
   paragraphsInputEl.max = text.length;
   paragraphsInputEl.placeholder = text.length;
+});
+
+paragraphsInputEl.addEventListener("change", (e) => {
+  const value = e.target.value;
+  if (value) {
+    submitBtnEl.disabled = false;
+  }
 });
 
 formEl.addEventListener("submit", (e) => {
