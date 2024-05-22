@@ -28,5 +28,7 @@ formEl.addEventListener("submit", (e) => {
       p.textContent = `${index + 1}. ${item}`;
       textContainerEl.appendChild(p);
     });
+
+    textContainerEl.scrollIntoView();
   }
 });
