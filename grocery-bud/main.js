@@ -28,6 +28,7 @@ groceryListContainerEl.addEventListener("click", (e) => {
     if (groceryListContainerEl.childNodes.length === 0) {
       clearBtnEl.classList.remove("show");
     }
+    toggleIsEditing(false, null, "Submit");
   }
   if (isEdit) {
     const groceryItemEls = document.querySelectorAll(".grocery-item");
