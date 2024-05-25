@@ -18,6 +18,8 @@ window.addEventListener("DOMContentLoaded", () =>
 groceryListContainerEl.addEventListener("click", (e) => {
   const isDelete = e.target.classList.contains("delete-btn");
   const isEdit = e.target.classList.contains("edit-btn");
+  const groceryItemEls = document.querySelectorAll(".grocery-item");
+
   if (isDelete) {
     const groceryItemEl = e.target.closest(".grocery-item");
     const id = groceryItemEl.dataset.itemId;
@@ -29,9 +31,10 @@ groceryListContainerEl.addEventListener("click", (e) => {
       clearBtnEl.classList.remove("show");
     }
     toggleIsEditing(false, null, "Submit");
+    groceryInputEl.value = "";
+    groceryItemEls.forEach((item) => item.classList.remove("editing"));
   }
   if (isEdit) {
-    const groceryItemEls = document.querySelectorAll(".grocery-item");
     const groceryItemEl = e.target.closest(".grocery-item");
     const itemValue = groceryItemEl.querySelector("p").textContent;
     const id = groceryItemEl.dataset.itemId;
