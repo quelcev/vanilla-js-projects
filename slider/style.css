@@ -74,6 +74,10 @@ section {
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  visibility: hidden;
+}
+.single-slide.active {
+  visibility: visible;
 }
 .single-slide:nth-child(odd) {
   background-color: #0765ff;

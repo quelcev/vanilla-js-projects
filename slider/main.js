@@ -34,7 +34,12 @@ function triggerSlide() {
     prevBtn.style.display = "block";
   }
 
-  slidesEl.forEach((slide) => {
+  slidesEl.forEach((slide, index) => {
+    if (index === currentSlideIndex) {
+      slide.classList.add("active");
+    } else {
+      slide.classList.remove("active");
+    }
     slide.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
   });
 }
