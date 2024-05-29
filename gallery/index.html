@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="gallery-container">
+      <div class="gallery-center">
+        <img
+          src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-1.jpeg"
+          class="img"
+          alt="City 1"
+          data-img-index="1"
+        />
+        <img
+          src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-2.jpeg"
+          class="img"
+          alt="City 2"
+          data-img-index="2"
+        />
+        <img
+          src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-3.jpeg"
+          class="img"
+          alt="City 3"
+          data-img-index="3"
+        />
+        <img
+          src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-4.jpeg"
+          class="img"
+          alt="City 4"
+          data-img-index="4"
+        />
+        <img
+          src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-5.jpeg"
+          class="img"
+          alt="City 5"
+          data-img-index="5"
+        />
+      </div>
+    </section>
+
+    <aside class="modal-overlay">
+      <div class="modal-container">
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="modal-center">
+          <div class="modal-img-container">
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-1.jpeg"
+              class="modal-main-img"
+              alt="City 1"
+              data-img-index="1"
+            />
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <h3>City 1</h3>
+          <div class="modal-images-container">
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-1.jpeg"
+              class="modal-img"
+              alt="City 1"
+              data-img-index="1"
+            />
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-2.jpeg"
+              class="modal-img"
+              alt="City 2"
+              data-img-index="2"
+            />
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-3.jpeg"
+              class="modal-img"
+              alt="City 3"
+              data-img-index="3"
+            />
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-4.jpeg"
+              class="modal-img"
+              alt="City 4"
+              data-img-index="4"
+            />
+            <img
+              src="https://vannilla-js-basic-project-17-gallery.netlify.app/images/city-5.jpeg"
+              class="modal-img"
+              alt="City 5"
+              data-img-index="5"
+            />
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script src="index.js"></script>
+  </body>
+</html>
