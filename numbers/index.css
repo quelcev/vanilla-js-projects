@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Numbers CSS */
+.numbers-container {
+  background-color: #f7fafc;
+  min-height: 100vh;
+}
+.numbers-center {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 15px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.single-number {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-bottom: 4px solid transparent;
+}
+.single-number .number {
+  font-size: 64px;
+  font-weight: 500;
+}
+.single-number p {
+  font-size: 24px;
+}
+.single-number:nth-child(1) {
+  border-bottom-color: #4284f3;
+}
+.single-number:nth-child(2) {
+  border-bottom-color: #ea4335;
+}
+.single-number:nth-child(3) {
+  border-bottom-color: #fabc05;
+}
