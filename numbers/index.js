@@ -7,8 +7,11 @@ numberEls.forEach((el) => {
   const intId = setInterval(() => {
     goalNum += increment;
     if (goalNum >= endNum) {
+      el.textContent = `${goalNum}+`;
       clearInterval(intId);
+      return;
     }
+    console.log(234);
     el.textContent = goalNum;
   }, 1);
 });
