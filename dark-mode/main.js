@@ -1,21 +1,29 @@
-const darkModeCheckbox = document.querySelector(".dark-mode-switch input");
+const darkModeInput = document.querySelector(".dark-mode-switch input");
+const darkModeEl = document.querySelector(".dark-mode-switch");
 const darkModeTextEl = document.querySelector(".nav-center > span");
-const darkMode = JSON.parse(localStorage.getItem("darkMode")) ?? false;
+let darkMode = JSON.parse(localStorage.getItem("darkMode")) ?? false;
 
 window.addEventListener("DOMContentLoaded", () => setDarkMode(darkMode));
-darkModeCheckbox.addEventListener("change", (e) =>
-  setDarkMode(e.target.checked)
-);
+darkModeInput.addEventListener("change", (e) => {
+  darkMode = e.target.checked;
+  setDarkMode();
+});
+darkModeEl.addEventListener("keypress", (e) => {
+  if (e.keyCode === 13 || e.keyCode === 32) {
+    darkMode = !darkMode;
+    setDarkMode();
+  }
+});
 
-function setDarkMode(isDarkMode) {
-  if (isDarkMode) {
+function setDarkMode() {
+  if (darkMode) {
     darkModeTextEl.textContent = "Dark Mode";
     document.body.classList.add("dark-mode");
-    darkModeCheckbox.checked = true;
+    darkModeInput.checked = true;
   } else {
     darkModeTextEl.textContent = "Light Mode";
     document.body.classList.remove("dark-mode");
-    darkModeCheckbox.checked = false;
+    darkModeInput.checked = false;
   }
-  localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+  localStorage.setItem("darkMode", JSON.stringify(darkMode));
 }
