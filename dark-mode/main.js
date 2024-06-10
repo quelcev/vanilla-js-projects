@@ -4,8 +4,8 @@ const darkModeTextEl = document.querySelector(".nav-center > span");
 let darkMode = JSON.parse(localStorage.getItem("darkMode")) ?? false;
 
 window.addEventListener("DOMContentLoaded", () => setDarkMode(darkMode));
-darkModeInput.addEventListener("change", (e) => {
-  darkMode = e.target.checked;
+darkModeInput.addEventListener("change", () => {
+  darkMode = !darkMode;
   setDarkMode();
 });
 darkModeEl.addEventListener("keypress", (e) => {
