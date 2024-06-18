@@ -79,7 +79,6 @@ function displayProducts(products) {
           <div>
             <h5 class="product-name">${title}</h5>
             <span class="product-price">${formatter.format(price)}</span>
-            <p>${company}</p>
           </div>
         </article>
       `;
