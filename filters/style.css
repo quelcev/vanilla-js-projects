@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* Project CSS */
+body {
+  font-family: "Roboto", sans-serif;
+}
+.filters__products-container {
+  background-color: #f7fafc;
+  min-height: 100vh;
+}
+.filters__products-container-center {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 60px 15px;
+  display: flex;
+  gap: 60px;
+}
+.products-container {
+  display: flex;
+  row-gap: 30px;
+  column-gap: 15px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+#product-search {
+  background-color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-color: transparent;
+  margin-bottom: 30px;
+}
+.company-filter h5 {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.company-filter ul {
+  padding: 0;
+  list-style: none;
+}
+.company-filter ul li {
+  margin-bottom: 15px;
+}
+.company-filter button {
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+}
+.company-filter button:hover,
+.company-filter button.active {
+  opacity: 0.5;
+}
+.single-product {
+  flex-basis: calc(100% / 3 - 10px);
+}
+.product-img {
+  border-radius: 4px;
+  height: 170px;
+  object-fit: cover;
+  width: 100%;
+}
+.single-product {
+  text-align: center;
+}
+.product-name {
+  margin: 10px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 768px) {
+  .single-product {
+    flex-basis: calc(100% / 2 - 8px);
+  }
+}
+@media only screen and (max-width: 640px) {
+  .single-product {
+    flex-basis: 100%;
+  }
+  .filters__products-container-center {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .company-filter ul {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+  }
+}
