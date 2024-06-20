@@ -1,7 +1,7 @@
 const generateBtnEl = document.querySelector(".generate-btn");
 const resultEl = document.querySelector(".result");
 
-fetchJoke();
+window.addEventListener("DOMContentLoaded", fetchJoke);
 generateBtnEl.addEventListener("click", fetchJoke);
 
 async function fetchJoke() {
