@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: slateblue;
+}
+.calendar-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.month-name {
+  margin: 0;
+  background-color: orangered;
+  color: #fff;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.day-name {
+  font-size: 20px;
+  color: darkgray;
+}
+.day-number {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bold;
+}
+.year {
+  margin: 20px 0;
+  font-size: 20px;
+  color: darkgray;
+  font-weight: 500;
+}
