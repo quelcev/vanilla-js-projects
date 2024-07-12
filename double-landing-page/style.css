@@ -1,0 +1,141 @@
+/* 
+  ========== CSS Reset ==========
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* 
+  ========== Project CSS ==========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.split {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 600ms ease-in-out;
+  width: 50%;
+}
+.split .copy {
+  transition: all 600ms ease-in-out;
+}
+.split.left {
+  background-image: url("https://images.unsplash.com/photo-1591337676887-a217a6970a8a?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.split.right {
+  background-image: url("https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.copy h2 {
+  font-size: 100px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 60px;
+  word-wrap: normal;
+}
+.btn {
+  cursor: pointer;
+  width: 180px;
+  padding: 15px 0;
+  font-size: 18px;
+  transition: all 200ms ease-in-out;
+  border: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+  margin: 60px 0 0 60px;
+}
+.btn:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+.active-left .left {
+  width: 75%;
+}
+.active-left .right {
+  width: 25%;
+}
+.active-right .left {
+  width: 25%;
+}
+.active-right .right {
+  width: 75%;
+}
+.active-left .right .copy,
+.active-right .left .copy {
+  opacity: 0;
+}
+/* 
+  ========== Media Queries ==========
+*/
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .split {
+    width: 100%;
+    height: 50vh;
+  }
+  .active-left .left {
+    height: 75vh;
+  }
+  .active-left .right {
+    height: 25vh;
+  }
+  .active-right .left {
+    height: 25vh;
+  }
+  .active-right .right {
+    height: 75vh;
+  }
+  .copy h2 {
+    font-size: 44px;
+  }
+}
