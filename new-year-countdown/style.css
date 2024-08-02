@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* 
+  ========== CSS Reset ==========
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* 
+  ========== Project CSS ==========
+*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+.countdown-container {
+  background-color: #6a63d2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.countdown-inner {
+  text-align: center;
+  flex-basis: 100%;
+  color: #fff;
+}
+.counter-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.counter-container > div {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.counter-container > div > span:first-child {
+  font-size: 32px;
+}
+.counter-container > div > span:last-child {
+  font-size: 12px;
+}
+h1 {
+  text-transform: uppercase;
+  padding: 0 20px;
+  letter-spacing: 4px;
+}
+.year {
+  margin: 30px 0;
+  display: block;
+  font-size: 100px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 425px) {
+  .counter-container > div {
+    flex-basis: calc((100% - 50px) / 2);
+  }
+}

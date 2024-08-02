@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* 
+  ========== CSS Reset ==========
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* 
+  ========== Project CSS ==========
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+.search-bar-container {
+  height: 50px;
+  border-radius: 50px;
+  width: 100%;
+  background-color: aliceblue;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25),
+    -6px -6px 10px rgba(255, 255, 255, 0.7);
+  position: relative;
+  transition: max-width 400ms ease-in-out;
+  max-width: 300px;
+}
+.search-bar-container img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.magnifier-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.mic-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.magnifier-icon {
+  transition: left 400ms ease-in-out, transform 400ms ease-in-out;
+}
+.mic-icon,
+.input {
+  transition: transform 400ms ease-in-out;
+  transition-delay: 400ms;
+}
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(100, 100, 100);
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-bar-container.active {
+  max-width: 50px;
+}
+.search-bar-container.active .mic-icon,
+.search-bar-container.active .input {
+  transform: scale(0);
+  transition-delay: 0ms;
+}
+.search-bar-container.active .magnifier-icon {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
